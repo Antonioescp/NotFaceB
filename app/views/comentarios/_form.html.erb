@@ -1,0 +1,12 @@
+<%= form_with model: [@usuario_actual, @post, Comentario.new], local: true do |f| %>
+
+  <div class="field">
+  	<%= f.label "Di lo que tengas que decir" %> <br>
+  	<%= f.text_area :contenido %>
+  </div>
+
+  <div class="submit">
+  	<%= f.submit "Comentar" %>
+  </div>
+
+<% end %>

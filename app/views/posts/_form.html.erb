@@ -1,0 +1,12 @@
+<%= form_with model: [@usuario_actual, Post.new], local: true do |f| %>
+
+  <div class="field">
+  	<%= f.label "Dinos que piensas!" %> <br>
+  	<%= f.text_area :contenido %>
+  </div>
+
+  <div class="submit">
+  	<%= f.submit %>
+  </div>
+
+<% end %>

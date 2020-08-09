@@ -1,0 +1,18 @@
+<div class="post" style="background-color:gray; padding:5px; border:1px solid black; margin-left:5px; border-radius:5px; margin-top: 10px; margin-bottom: 10px; width:300px;">
+  <h4><%= post.usuario.nombre + " " + post.usuario.apellido %> dice: </h4>
+  <p><%= post.contenido %></p>
+
+  <p>
+    Comentarios: <%= post.comentarios.count %>
+  </p>
+
+  <p>
+  	<%= link_to "Ver Publicacion (puedes comentar)", usuario_post_path(post.usuario, post) %>
+  </p>
+  
+  <p>
+  	<% if post.usuario == @usuario_actual %>
+      <%= link_to "Borrar publicacion", usuario_post_path(@usuario_actual, post), method: :delete %>
+  	<% end %>
+  </p>
+</div>

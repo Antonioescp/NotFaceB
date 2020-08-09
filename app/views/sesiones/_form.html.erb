@@ -1,0 +1,15 @@
+<%= form_with url: iniciar_sesion_path, local: true do |f| %>
+  <div class="field">
+  	<%= f.label :correo %> <br>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+  	<%= f.label "Contraseña" %> <br>
+  	<%= f.password_field :password %>
+  </div>
+
+  <div class="inicar-sesion-submit">
+  	<%= f.submit "iniciar sesion" %>
+  </div>
+<% end %>

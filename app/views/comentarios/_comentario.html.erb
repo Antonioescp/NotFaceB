@@ -1,0 +1,7 @@
+<div class="comentario" style="background-color:gray; padding:5px; border:1px solid black; margin-left:5px; border-radius:5px; margin-top: 10px; margin-bottom: 10px; width:300px;">
+  <p><%= comentario.usuario.nombre %> dice: </p>
+  <p><%= comentario.contenido %></p>
+  <% if comentario.usuario.id == @usuario_actual.id %>
+    <%= link_to "Borrar", usuario_post_comentario_path(@usuario_actual, @post, comentario), method: :delete %>
+  <% end %>
+</div>

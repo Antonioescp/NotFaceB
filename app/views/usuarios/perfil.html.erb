@@ -1,0 +1,16 @@
+<h2>Mi perfil!</h2>
+<div class="perfil-nombre">
+  <h3><%= @usuario_actual.nombre + " " + @usuario_actual.apellido %></h3> <br>
+  Amigos: <%= @usuario_actual.amigos.count %> (aun no se implementa, ajio)
+</div>
+
+<div class="perfil-post">
+  <%= render 'posts/form' %>
+</div>
+
+
+<h4>Mis publicaciones!</h4>
+
+<div class="perfil-publicaciones">
+	<%= render @posts %>
+</div>
